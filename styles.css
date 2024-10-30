@@ -471,28 +471,33 @@ footer {
 .related-poems ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for long button names */
+    justify-content: center;
 }
 
 .related-poems li {
-    display: inline; /* Default for desktop */
     margin: 5px;
+    flex: 1 1 auto; /* Allows buttons to resize if needed */
 }
 
 .poem-button {
     display: inline-block;
     padding: 10px 20px;
     margin: 5px;
-    background-color: #4CAF50; /* Button color */
+    background-color: #4CAF50;
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
     transform: translateY(0);
+    white-space: nowrap; /* Prevents text from breaking in the middle */
+    text-align: center;
 }
 
 .poem-button:hover {
-    background-color: #45a049; /* Hover color */
+    background-color: #45a049;
     transform: scale(1.1) translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -509,16 +514,17 @@ footer {
 
     .related-poems ul {
         padding: 0;
+        justify-content: center;
     }
 
     .related-poems li {
-        display: block; /* Stack buttons vertically on smaller screens */
-        margin: 10px 0;
+        flex: none; /* Prevents automatic resizing on small screens */
+        width: auto; /* Allows buttons to align inline */
     }
 
     .poem-button {
-        width: 90%; /* Make buttons full-width, with slight margin */
+        width: auto;
         padding: 15px;
-        font-size: 1.1em; /* Increase font size for readability */
+        font-size: 1.1em;
     }
 }
