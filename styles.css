@@ -1,0 +1,509 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffebcc; /* Light peach background */
+    color: black;
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    animation: backgroundColorChange 8s ease-in-out infinite alternate; /* Adds a gentle background color change */
+}
+header {
+    width: 100%; /* Instead of a fixed width like 500px */
+    padding: 1em; /* Instead of a fixed padding like 20px */
+}
+@media (max-width: 768px) {
+    header {
+        font-size: 1.2em; /* Adjust font size for readability */
+        padding: 0.5em;
+    }
+}
+
+@keyframes backgroundColorChange {
+    0% { background-color: #ffebcc; }
+    100% { background-color: #ffccff; }
+}
+
+h1, h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    color: #ff5722; /* Brighter color */
+    margin-bottom: 20px;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffe6; /* Soft yellow */
+    border: 2px dashed #ff6f61;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.card:hover {
+    transform: rotate(3deg) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.card:before {
+    content: "📌"; /* Pin emoji */
+    font-size: 1.2em; /* Adjust size as needed */
+    position: absolute;
+    top: -10px;
+    left: 0; /* Move the pin slightly to the right */
+}
+
+.card:after {
+    content: "🌟🎉"; /* Adds fun emoji decorations */
+    font-size: 2em;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* Button Styles */
+.btn-secondary {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 24px;
+    border: 2px solid #ffb347;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+}
+
+.btn-secondary:hover {
+    background-color: #ffb347;
+    transform: scale(1.1);
+    text-shadow: 1px 1px 2px #ff5722;
+}
+
+/* Navbar Styles */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 28px;
+    color: #ff6f61;
+}
+
+.nav-link {
+    color: #ffb347;
+    padding: 10px;
+    transition: color 0.3s ease;
+    font-size: 1.2em;
+}
+
+.nav-link:hover {
+    color: #ff6f61;
+    text-decoration: none;
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    flex: 1;
+}
+
+/* Input and Textarea Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ffb347;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #333;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+    outline: none;
+    animation: pulse 0.6s ease-in-out; /* Animation on focus */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Smaller padding */
+    font-size: 1.1em;
+    position: relative;
+    z-index: 1;
+}
+
+/* Bottom emojis container styling */
+.bottom-emojis {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 3em; /* Emoji size */
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Emoji styles */
+.bottom-emojis span {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ffffe6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar Styles */
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px; /* Rounded edges */
+    border: 2px solid #ffb347; /* Light border */
+    margin-bottom: 20px; /* Space below the search bar */
+    font-size: 1.2em; /* Bigger text */
+    color: #333;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #ffffe6; /* Light yellow background */
+    animation: slide-in 0.5s ease-in-out; /* Animation for search bar */
+}
+
+@keyframes slide-in {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Focus effect for the search bar */
+.search-bar:focus {
+    border-color: #ff6f61; /* Change border color on focus */
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.5); /* Glow effect */
+    outline: none; /* Remove outline */
+}
+
+/* Search button styles */
+.search-button {
+    background-color: #ff6f61; /* Bright button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Rounded edges */
+    cursor: pointer;
+    font-size: 1.2em; /* Bigger text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    margin-left: 10px; /* Space between input and button */
+}
+
+/* Button hover effect */
+.search-button:hover {
+    background-color: #ffb347; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+/* About Page Photo Animation */
+.about-photo {
+    opacity: 0; /* Start as invisible */
+    animation: fadeInAndBounce 1s ease-in forwards; /* Fade-in and bounce animation */
+}
+
+@keyframes fadeInAndBounce {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); /* Start slightly below */
+    }
+    50% {
+        opacity: 0.5; /* Midway opacity */
+        transform: translateY(-10px); /* Move slightly above */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+/* Header Styles */
+.header-container {
+    text-align: center; /* Center-aligns the content */
+    margin-bottom: 30px; /* Space below the header */
+}
+
+.header-photo {
+    width: 200px; /* Increased size from 200px to 250px */
+    height: 200px; /* Increased size from 200px to 250px */
+    border-radius: 50%; /* Keep it circular */
+    animation: float 2s ease-in-out infinite; /* Add animation if desired */
+}
+
+@keyframes fadeInAndBounce {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); /* Start slightly below */
+    }
+    50% {
+        opacity: 0.5; /* Midway opacity */
+        transform: translateY(-10px); /* Move slightly above */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+/* Background image and styling for the poem container */
+/* Default styling for poem container */
+.poem-container {
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Faded overlay effect on the background image */
+.poem-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity for the fade effect */
+    z-index: 1; /* Ensure this is behind the content */
+}
+
+/* Ensure text and links appear above the overlay */
+.poem-container h2,
+.poem-container p,
+.poem-container a {
+    position: relative;
+    z-index: 2; /* Content is on top of overlay */
+}
+
+/* Specific background images for each poem */
+.poem1 {
+    background-image: url('gurua.jpg');
+}
+.poem2 {
+    background-image: url('paus.jpg');
+}
+.poem3 {
+    background-image: url('shoor.jpg');
+}
+.poem4 {
+    background-image: url('moon.jpg');
+}
+.poem5 {
+    background-image: url('krishna.jpg');
+}
+.poem6 {
+    background-image: url('father.jpg');
+}
+.poem7 {
+    background-image: url('vitthal.jpeg');
+}
+.poem8 {
+    background-image: url('baliraj.jpg');
+}
+.poem9 {
+    background-image: url('aai.jpg');
+}
+.poem10 {
+    background-image: url('ram.jpg');
+}
+.poem11 {
+    background-image: url('family.jpg');
+}
+.poem12 {
+    background-image: url('time.jpeg');
+}
+.poem13 {
+    background-image: url('tree.jpg');
+}
+.poem14 {
+    background-image: url('abhar.jpg');
+}
+.poem15 {
+    background-image: url('prasang.jpg');
+}
+.poem16 {
+    background-image: url('ase.jpg');
+}
+.poem17 {
+    background-image: url('man.jpg');
+}
+.poem18 {
+    background-image: url('hasu.jpg');
+}
+.poem19 {
+    background-image: url('bhaji.jpg');
+}
+.poem20 {
+    background-image: url('bahin.jpg');
+}
+.poem21 {
+    background-image: url('aiaai.jpg');
+}
+.poem22 {
+    background-image: url('marathi.jpg');
+}
+.poem23 {
+    background-image: url('pakshi.jpg');
+}
+.poem24 {
+    background-image: url('gudhi.jpg');
+}
+.poem25 {
+    background-image: url('holi.jpg');
+}
+.poem26 {
+    background-image: url('naari.jpg');
+}
+.poem27 {
+    background-image: url('sahitya.jpg');
+}
+.poem28 {
+    background-image: url('nutun.jpg');
+}
+.poem29 {
+    background-image: url('makar.jpg');
+}
+.poem30 {
+    background-image: url('bai.jpeg');
+}
+.poem31 {
+    background-image: url('mai.jpg');
+}
+.poem32 {
+    background-image: url('diwali.jpg');
+}
+.poem33 {
+    background-image: url('bappa.jpg');
+}
+.poem34 {
+    background-image: url('isro.jpg');
+}
+.poem35 {
+    background-image: url('kranti.jpg');
+}
+.poem36 {
+    background-image: url('aai2.jpg');
+}
+.poem37 {
+    background-image: url('guru2.jpg');
+}
+.poem38 {
+    background-image: url('megh.jpg');
+}
+.poem39 {
+    background-image: url('friend.jpeg');
+}
+.poem40 {
+    background-image: url('father.jpeg');
+}
+.related-poems {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.related-poems h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.related-poems ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.related-poems li {
+    display: inline; /* Default for desktop */
+    margin: 5px;
+}
+
+.poem-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4CAF50; /* Button color */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    transform: translateY(0);
+}
+
+.poem-button:hover {
+    background-color: #45a049; /* Hover color */
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.poem-button:active {
+    transform: scale(1.05) translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .related-poems h2 {
+        font-size: 1.2em;
+    }
+
+    .related-poems ul {
+        padding: 0;
+    }
+
+    .related-poems li {
+        display: block; /* Stack buttons vertically on smaller screens */
+        margin: 10px 0;
+    }
+
+    .poem-button {
+        width: 90%; /* Make buttons full-width, with slight margin */
+        padding: 15px;
+        font-size: 1.1em; /* Increase font size for readability */
+    }
+}

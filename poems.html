@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poems</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Revati Sandip Chavan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="poems.html">Poems</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="container mt-5">
+    <h2>Poems Collection</h2>
+    
+    <!-- Search Bar -->
+    <div class="mb-4">
+        <form role="search" id="searchForm" style="display: flex; align-items: center;">
+            <input type="search" class="search-bar" placeholder="🔍 Search for poems (English or Marathi)..." aria-label="Search" required>
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+
+    <!-- Message for no search results -->
+    <div id="noResultsMessage" class="alert alert-warning" style="display: none;">
+        No poems found matching your search.
+    </div>
+
+    <div class="row" id="poemList">
+        <div class="col-md-4 mb-3" data-title="गुरु">
+            <a href="guru.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">गुरु</h5>
+                    <p class="card-text text-secondary">माझ्या जीवनात प्रेरणा देणाऱ्या शिक्षकांवर एक कविता..</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4 mb-3" data-title="बळीराजा">
+            <a href="baliraja.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">बळीराजा</h5>
+                    <p class="card-text text-secondary">बळीराजाच्या संघर्षावर एक कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="नातं">
+            <a href="nath.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">नातं</h5>
+                    <p class="card-text text-secondary">नात्यांच्या भावनांवर आधारित एक कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="क्षण">
+            <a href="kshan.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">क्षण</h5>
+                    <p class="card-text text-secondary">गोड आठवणींचा भावार्थ सांगणारी कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="पाऊस">
+            <a href="Paus.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">पाऊस</h5>
+                    <p class="card-text text-secondary">पावसावर एक कविता....</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="विठुमाऊली">
+            <a href="vithumauli.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">विठुमाऊली</h5>
+                    <p class="card-text text-secondary">विठुमाऊलीच्या भक्तिभावावर आधारित एक कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="एक क्षण आईचा">
+            <a href="ek_kshan_aicha.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">एक क्षण आईचा</h5>
+                    <p class="card-text text-secondary">आईच्या गोड आठवणींवर आधारित एक कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="रघुनंदन श्रीराम">
+            <a href="raghunandan_shriram.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">रघुनंदन श्रीराम</h5>
+                    <p class="card-text text-secondary">श्रीरामाच्या भक्तीवर एक कविता..</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="पौर्णिमेचा चंद्र">
+            <a href="pournimecha_chandra.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">पौर्णिमेचा चंद्र</h5>
+                    <p class="card-text text-secondary">पौर्णिमेच्या चंद्रावर एक कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="आयुष्याचे आभार">
+            <a href="ayushyache_aabhar.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">आयुष्याचे आभार</h5>
+                    <p class="card-text text-secondary">आयुष्यातील सर्व गोष्टींसाठी आभार व्यक्त करणारी कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="आयुष्य">
+            <a href="ayushyach.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">आयुष्य</h5>
+                    <p class="card-text text-secondary">जीवनाच्या विविध पैलूंवर आधारित एक कविता....</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="मुकुंदा">
+            <a href="mukunda.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">मुकुंदा</h5>
+                    <p class="card-text text-secondary">मुकुंदाच्या प्रेमळ स्वरूपाला अर्पण केलेली एक कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="प्रसंग">
+            <a href="prasang.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">प्रसंग</h5>
+                    <p class="card-text text-secondary">आपल्या जीवनातील महत्त्वाच्या प्रसंगांवर आधारित एक कविता....</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="शूरवीर">
+            <a href="Shoorveer.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">शूरवीर</h5>
+                    <p class="card-text text-secondary">शूरवीरांची महिमा आणि त्यागावर आधारित एक कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="असे कसे?">
+            <a href="AseKase.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">असे कसे?</h5>
+                    <p class="card-text text-secondary">असे कसे? जीवनाच्या गूढतेची चौकशी करणारी एक कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="बाप म्हणजे काय?">
+            <a href="BapMhanjeKay.html" class="card shadow-sm text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">बाप म्हणजे काय?</h5>
+                    <p class="card-text text-secondary">बाबांवर आधारित एक कविता...</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3" data-title="मन">
+    <a href="Man.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">मन</h5>
+            <p class="card-text text-secondary">विचारांवर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="जीवनात हसून बघ">
+    <a href="JeevanatHasunBagh.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">जीवनात हसून बघ</h5>
+            <p class="card-text text-secondary">आनंदाने जगण्यावर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="भाजी घ्या भाजी">
+    <a href="BhajiGhyaBhaji.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">भाजी घ्या भाजी</h5>
+            <p class="card-text text-secondary">ताज्या भाज्यांवर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="नव्हती जेव्हा मला एक छोटीशी बहीण">
+    <a href="NawhatiJehvaMalaEkChotishiBahini.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">नव्हती जेव्हा मला एक छोटीशी बहीण</h5>
+            <p class="card-text text-secondary">भावंडांवर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="आई">
+    <a href="Aai.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">आई</h5>
+            <p class="card-text text-secondary">आईच्या प्रेमावर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="माय मराठी">
+    <a href="MaaMarathi.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">माय मराठी</h5>
+            <p class="card-text text-secondary">मराठी भाषेवरील अभिमानाची एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="पक्षी">
+    <a href="Pakshi.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">पक्षी</h5>
+            <p class="card-text text-secondary">जीवसृष्टीतील पक्ष्यांवरील एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="गुढीपाडवा">
+    <a href="GudiPadwa.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">गुढीपाडवा</h5>
+            <p class="card-text text-secondary">नववर्षाच्या स्वागताची एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="होळी">
+    <a href="Holi.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">होळी</h5>
+            <p class="card-text text-secondary">होळी सणाच्या आनंदाबद्दल एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="नारी शक्ती">
+    <a href="NariShakti.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">नारी शक्ती</h5>
+            <p class="card-text text-secondary">नारीच्या सामर्थ्यावर एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="साहित्य संमेलन">
+    <a href="SahityaSammelan.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">साहित्य संमेलन</h5>
+            <p class="card-text text-secondary">मराठी भाषेच्या महत्त्वावर एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="नूतन वर्ष">
+    <a href="Nutankal.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">नूतन वर्ष</h5>
+            <p class="card-text text-secondary">नवीन वर्षाचे स्वागत करण्यावर एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="मकर संक्रांत">
+    <a href="MakarSankrant.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">मकर संक्रांत</h5>
+            <p class="card-text text-secondary">पतंग उडवण्याच्या आनंदावर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="प्रिय बाई">
+    <a href="PriBai.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">प्रिय बाई</h5>
+            <p class="card-text text-secondary">गुरु वंदनावर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="माय">
+    <a href="Mai.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">माय</h5>
+            <p class="card-text text-secondary">आईवर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="दिवाळी">
+    <a href="Diwali.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">दिवाळी</h5>
+            <p class="card-text text-secondary">दिवाळी सणावर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="माझा बाप्पा">
+    <a href="MajhaBappa.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">माझा बाप्पा</h5>
+            <p class="card-text text-secondary">बाप्पा आणि त्याच्या सणावर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="इस्रो">
+    <a href="ISRO.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">इस्रो</h5>
+            <p class="card-text text-secondary">इस्रोच्या कामगिरीवर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="क्रांतिकारक">
+    <a href="Krantikarak.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">क्रांतिकारक</h5>
+            <p class="card-text text-secondary">भारताच्या क्रांतिकारकांवर आधारित एक कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="आई">
+    <a href="Aai2.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">आई</h5>
+            <p class="card-text text-secondary">आईवर आधारित एक हृदयस्पर्शी कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="गुरु">
+    <a href="Guru2.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">गुरु</h5>
+            <p class="card-text text-secondary">भगवंत आणि गुरूच्या महिम्यावर आधारित एक सुंदर कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="मेघगर्जना">
+    <a href="Meghgarjana.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">मेघगर्जना</h5>
+            <p class="card-text text-secondary">काळ्या ढगांच्या गर्जनेवर आधारित कविता...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="मैत्री">
+    <a href="Maitri.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">मैत्री</h5>
+            <p class="card-text text-secondary">मैत्री म्हणजे निस्वार्थ आनंदाचा पाट...</p>
+        </div>
+    </a>
+</div>
+<div class="col-md-4 mb-3" data-title="वडील">
+    <a href="Vadil.html" class="card shadow-sm text-decoration-none">
+        <div class="card-body">
+            <h5 class="card-title text-dark">वडील</h5>
+            <p class="card-text text-secondary">वडील भंडार प्रेमाचा, असे मायेचा सागर...</p>
+        </div>
+    </a>
+</div>
+
+
+
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center bg-dark text-light py-4">
+    <p>© 2024 Revati Sandip Chavan</p>
+</footer>
+
+<script>
+    // JavaScript for Search Functionality
+    const searchInput = document.querySelector('input[type="search"]');
+    const poemCards = document.querySelectorAll('#poemList .col-md-4');
+    const noResultsMessage = document.getElementById('noResultsMessage'); // Reference to the message element
+
+    const transliterationMap = {
+        'गुरु': 'guru',
+        'बळीराजा': 'baliraja',
+        'नातं': 'nath',
+        'क्षण': 'kshan',
+        'पाऊस': 'paus',
+        'विठुमाऊली': 'vithumauli',
+        'एक क्षण आईचा': 'ek kshan aicha',
+        'रघुनंदन श्रीराम': 'raghunandan shriram',
+        'पौर्णिमेचा चंद्र': 'pournimecha chandra',
+        'आयुष्याचे आभार':'ayushyache aabhar',
+        'आयुष्य':'ayushy',
+        'मुकुंदा':'mukunda',
+        'प्रसंग':'prasang',
+        'शूरवीर':'shurveer',
+        'असे कसे?':'Asekase?',
+        'बाप म्हणजे काय?':'Bap Mhanje Kay?',
+        'मन':'man',
+        'जीवनात हसून बघ':'jeevanat hasun baga',
+        'भाजी घ्या भाजी':'Bhaji Ghya Bhaji',
+        'नव्हती जेव्हा मला एक छोटीशी बहीण':'Nawhati Jehva Mala Ek Chotishi Bahini',
+        'आई':'aai',
+        'माय मराठी':'may marathi',
+        'पक्षी':'pakshi',
+        'गुढीपाडवा':'Gudhi padawa',
+        'होळी':'holi',
+        'नारी शक्ती':'nari shakati',
+        'साहित्य संमेलन':'Sahitya Samelan',
+        'नूतन वर्ष':'nutan varsh',
+        'मकर संक्रांत':'Makar Sankrant',
+        'प्रिय बाई':'priya bai',
+        'माय':'maya',
+        'दिवाळी':'diwali',
+        'माझा बाप्पा':'mazha bappa',
+        'इस्रो':'isro',
+        'क्रांतिकारक':'krantikarak',
+        'मेघगर्जना':'meghgarjana',
+        'मैत्री':'maitri',
+        'वडील':'vadil'
+    };
+
+    document.querySelector('#searchForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const searchQuery = searchInput.value.toLowerCase();
+
+        let hasResults = false; // Flag to track if any poems match the search query
+
+        poemCards.forEach(card => {
+            const title = card.dataset.title.toLowerCase();
+            const transliteratedTitle = transliterationMap[title] ? transliterationMap[title].toLowerCase() : '';
+
+            // Check if either the title or its transliteration matches the search query
+            if (!title.includes(searchQuery) && !transliteratedTitle.includes(searchQuery)) {
+                card.style.display = 'none'; // Hide if neither matches
+            } else {
+                card.style.display = 'block'; // Show if either matches
+                hasResults = true; // At least one result found
+            }
+        });
+
+        // Show or hide the no results message
+        if (hasResults) {
+            noResultsMessage.style.display = 'none'; // Hide the message if results are found
+        } else {
+            noResultsMessage.style.display = 'block'; // Show the message if no results found
+        }
+    });
+
+    // Show all poems when the search input is cleared
+    searchInput.addEventListener('input', function() {
+        const searchQuery = searchInput.value.toLowerCase();
+        
+        // Show all poems if the search input is empty
+        if (searchQuery === '') {
+            poemCards.forEach(card => {
+                card.style.display = 'block'; // Show all
+            });
+            noResultsMessage.style.display = 'none'; // Hide the message
+        }
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
