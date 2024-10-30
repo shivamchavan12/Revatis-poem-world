@@ -7,7 +7,7 @@ const app = express();
 
 // Configure CORS to only allow requests from your GitHub Pages URL
 app.use(cors({
-    origin: 'https://shivamchavan12.github.io' // Replace with your GitHub Pages URL
+    origin: 'https://shivamchavan12.github.io/Revatis-poem-world/' // Replace with your GitHub Pages URL
 }));
 
 app.use(express.json());
