@@ -443,6 +443,21 @@ footer {
 .poem40 {
     background-image: url('father.jpeg');
 }
+.poem41 {
+    background-image: url('veel.jpeg');
+}
+.poem42 {
+    background-image: url('baal.jpeg');
+}
+.poem43 {
+    background-image: url('pimpal.jpeg');
+}
+.poem44 {
+    background-image: url('lok.jpeg');
+}
+.poem45 {
+    background-image: url('guru3.jpeg');
+}
 .related-poems {
     text-align: center;
     margin: 20px 0;
@@ -497,13 +512,13 @@ footer {
     }
 
     .related-poems li {
-        display: inline-block; /* Keep buttons in a horizontal line on smaller screens */
-        margin: 5px;
+        display: block; /* Stack buttons vertically on smaller screens */
+        margin: 10px 0;
     }
 
     .poem-button {
-        width: auto; /* Keep button width dynamic */
-        padding: 10px 15px;
+        width: 90%; /* Make buttons full-width, with slight margin */
+        padding: 15px;
         font-size: 1.1em; /* Increase font size for readability */
     }
 }
