@@ -7,7 +7,7 @@ const app = express();
 
 // Configure CORS to only allow requests from your GitHub Pages URL
 app.use(cors({
-    origin: 'https://shivamchavan12.github.io/Revatis-poem-world/' // Replace with your GitHub Pages URL
+    origin: 'https://shivamchavan12.github.io/Revatis-poem-world/' // GitHub Pages URL
 }));
 
 app.use(express.json());
@@ -35,9 +35,10 @@ app.post('/send-email', (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error("Error sending email:", error.message);
+            console.error("Error sending email:", error);
             return res.status(500).send('Error sending email: ' + error.message);
         }
+        console.log("Email sent:", info.response);
         res.send('Email sent successfully!');
     });
 });
