@@ -58,7 +58,7 @@
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
 
-        fetch('https://revatis-poem-world.vercel.app/', { // Replace with the actual deployed URL
+        fetch('https://revatis-poem-world.vercel.app/send-email', { // Corrected URL to point to deployed API
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
