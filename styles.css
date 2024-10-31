@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Merriweather', serif;
     background-color: #ffebcc; /* Light peach background */
     color: black;
     margin: 0;
@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     animation: backgroundColorChange 8s ease-in-out infinite alternate; /* Adds a gentle background color change */
 }
+
 header {
     width: 100%; /* Instead of a fixed width like 500px */
     padding: 1em; /* Instead of a fixed padding like 20px */
@@ -542,4 +543,34 @@ footer {
     padding: 20px; /* Optional for spacing around the content */
 }
 
+/* Import a Marathi font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+/* Base button styling */
+.btn {
+    font-family: 'Baloo Bhai 2', sans-serif; /* Marathi font */
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+/* Primary button styling */
+.btn-primary {
+    background-color: #ac15c3; /* Blue background */
+    color: white; /* White text */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #f81f0f; /* Darker blue on hover */
+}
+
+/* Large button styling */
+.btn-lg {
+    font-size: 20px;
+    padding: 14px 28px;
+}
 
