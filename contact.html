@@ -33,7 +33,14 @@
         <h4>My Address & Contact Information</h4>
         <p><strong>Address:</strong> Kalaprasad, saicity, Yeola Road, Kopargaon, Ahilyanagar, Maharashtra.</p>
         <p><strong>Email:</strong> 
-            <button onclick="openEmail()" class="btn btn-link">gaurichavan2005@gmail.com</button>
+        <!--
+            <button onclick="openEmail()" class="btn btn-link">gaurichavan2005@gmail.com</button> -->
+            <a href="mailto:youremail@gmail.com" 
+   onclick="if (!window.navigator.userAgent.includes('Mobi')) { 
+               window.location.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=gaurichavan2005@gmail.com'; 
+               return false; 
+             }">gaurichavan2005@gmail.com</a>
+
         </p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScFj_rrfvEfocgyNujV2jJRYOPVBmGHr0s_Lo_zd6N2Oa0aIg/viewform?usp=sf_link" target="_blank" style="text-decoration: underline; color: #0066cc; font-size: 20px; font-weight: bold;">
             अभिप्राय देण्यासाठी येथे क्लिक करा<br>(click here to give feedback)
