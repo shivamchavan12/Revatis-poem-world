@@ -27,18 +27,16 @@
 
 <div class="container mt-5">
     <h2>Contact Me</h2>
-
+    
     <!-- Contact Information Section -->
     <div class="mb-4 p-4 bg-light rounded center-align">
         <h4>My Address & Contact Information</h4>
-        <p><strong>Address:</strong>Kalaprasad, Saicity, Yeola Road, Kopargaon, Ahilyanagar, Maharashtra.</p>
-        <p><strong>Gmail:</strong> 
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gaurichavan2005@gmail.com" target="_blank">
-            gaurichavan2005@gmail.com
-        </a>
+        <p><strong>Address:</strong>Kalaprasad, saicity, Yeola Road, Kopargaon, Ahilyanagar, Maharashtra.</p>
+        <p><strong>Email:</strong> 
+            <button onclick="openEmail()" class="btn btn-link">gaurichavan2005@gmail.com</button>
+        </p>
     </div>
-
-    <!-- Contact Form -->
+    
     <form id="contactForm">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
@@ -63,35 +61,54 @@
 </footer>
 
 <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();
+function openEmail() {
+    const email = "gaurichavan2005@gmail.com"; // Replace with your actual email
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+    if (isMobile) {
+        // Attempt to open the Gmail app on mobile devices
+        window.location.href = `googlegmail://co?to=${email}`;
+        
+        // If Gmail app doesn’t open, fallback to Gmail web compose
+        setTimeout(() => {
+            window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+        }, 500);
+    } else {
+        // Open Gmail compose window in browser on desktop
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, "_blank");
+    }
+}
 
-        fetch('https://revatis-poem-world.vercel.app/send-email', { // Corrected URL to point to deployed API
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ name, email, message })
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(data => {
-            alert(data);
-            document.getElementById('contactForm').reset();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred while sending the email. Please try again later.');
-        });
+// Form submission handling
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    fetch('https://revatis-poem-world.vercel.app/send-email', { // Corrected URL to point to deployed API
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(data => {
+        alert(data);
+        document.getElementById('contactForm').reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while sending the email. Please try again later.');
     });
+});
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
