@@ -464,6 +464,9 @@ footer {
 .poem45 {
     background-image: url('guru3.jpeg');
 }
+.poem46 {
+    background-image: url('jagachesukh.jpg');
+}
 .related-poems {
     text-align: center;
     margin: 20px 0;
@@ -490,6 +493,20 @@ footer {
 }
 
 .poem-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #ff6b6b, #ffcc70);
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /*
     display: inline-block;
     padding: 10px 20px;
     margin: 5px;
@@ -574,3 +591,18 @@ footer {
     padding: 14px 28px;
 }
 
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #ff6b6b, #ffcc70);
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
